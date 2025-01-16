@@ -1,5 +1,5 @@
 import { FaStar } from "react-icons/fa";
-
+import { IoArrowBackCircle } from "react-icons/io5";
 /* eslint-disable react/prop-types */
 const BookingDetails = ({ service, onClose }) => {
   return (
@@ -11,8 +11,14 @@ const BookingDetails = ({ service, onClose }) => {
         className="bg-white md:w-[80%] w-[90%] h-[90vh] rounded-2xl p-5 shadow cursor-auto  relative"
         onClick={(e) => e.stopPropagation()}
       >
+        <button
+          className="absolute left-10 top-5 text-2xl cursor-pointer z-40"
+          onClick={() => onClose()}
+        >
+          <IoArrowBackCircle />
+        </button>
         <div className="bg-paste/10 w-96 h-96 rounded-full absolute top-[50%] left-0  -translate-y-[50%] z-10 blur-3xl "></div>
-        <div className=" grid lg:grid-cols-12 grid-cols-1 overflow-y-scroll scrollbar_none h-full w-full p-5  relative z-50 ">
+        <div className=" grid lg:grid-cols-12 grid-cols-1 overflow-y-scroll scrollbar_none h-full w-full p-5  relative z-30 ">
           <div className="lg:col-span-7 col-span-12 lg:order-1 order-2 lg:pr-10 pr-0 h-full w-full mt-32 sm:mt-10">
             <div className="">
               <h4 className="md:text-3xl sm:text-2xl text-xl font-medium font-lexend">
